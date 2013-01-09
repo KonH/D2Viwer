@@ -1,0 +1,13 @@
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\bin\Release\D2Viwer.exe.config
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\bin\Release\D2Viwer.exe
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\bin\Release\D2Viwer.pdb
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\obj\Release\MainWindow.baml
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\obj\Release\MainWindow.g.cs
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\obj\Release\App.g.cs
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\obj\Release\D2Viwer_Content.g.cs
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\obj\Release\D2Viwer_MarkupCompile.cache
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\obj\Release\D2Viwer.g.resources
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\obj\Release\D2Viwer.Properties.Resources.resources
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\obj\Release\D2Viwer.csproj.GenerateResource.Cache
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\obj\Release\D2Viwer.exe
+D:\Work\Programming\Visual Studio\In work\D2Viwer\D2Viwer\obj\Release\D2Viwer.pdb

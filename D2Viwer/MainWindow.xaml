@@ -1,0 +1,160 @@
+﻿<Window x:Class="D2Viwer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CURRENT_FOLDER" Height="350" Width="525" WindowState="Maximized" MouseWheel="Window_MouseWheel">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock x:Name="tbCurrentTrack" Text="CURRENT_TRACK" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" FontSize="18" FontStretch="Expanded" Opacity="0"></TextBlock>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Name="imgCurrentFolder" Grid.Row="0" Source="pack://siteoforigin:,,,/Resources/folder_icon.png" VerticalAlignment="Stretch">
+                </Image>
+                <TextBlock Name="tbCurrentFolder" Text="CURRENT_FOLDER" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Stretch"  FontSize="38" FontWeight="Bold" FontStretch="Condensed" TextWrapping="WrapWithOverflow">
+                    <TextBlock.Effect>
+                        <DropShadowEffect Opacity="0.25"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+            <ListBox Name="lboxTracks" Grid.Column="1" SelectionChanged="lboxTracks_SelectionChanged" Margin="5" BorderThickness="0" FontSize="18" FontWeight="Bold"/>
+        </Grid>
+        
+        <Grid Grid.Row="2" Margin="25,5,25,25">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="0.65*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.65*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" HorizontalAlignment="Right">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Name="imgBackLeft" Grid.Row="0" Source="pack://siteoforigin:,,,/Resources/folder_icon.png" MouseDown="imgFolder_MouseDown" VerticalAlignment="Stretch">
+                    <Image.Effect>
+                        <BlurEffect Radius="5"/>
+                    </Image.Effect>
+                </Image>
+                <TextBlock Name="tbBackLeft" Grid.Row="1" Text="BACK_LEFT" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF969696" FontSize="18" FontWeight="Bold" FontStretch="Condensed" TextWrapping="WrapWithOverflow">
+                    <TextBlock.Effect>
+                        <DropShadowEffect Opacity="0.4"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Column="1" HorizontalAlignment="Right">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Name="imgLeft" Grid.Row="0" Source="pack://siteoforigin:,,,/Resources/folder_icon.png" MouseDown="imgFolder_MouseDown" VerticalAlignment="Stretch">
+                    <Image.Effect>
+                        <BlurEffect Radius="4"/>
+                    </Image.Effect>
+                </Image>
+                <TextBlock Name="tbLeft" Grid.Row="1" Text="LEFT" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Foreground="#FF666666" FontWeight="Bold" FontStretch="Condensed" TextWrapping="WrapWithOverflow">
+                    <TextBlock.Effect>
+                        <DropShadowEffect Opacity="0.4"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Name="imgCenter" Grid.Row="0" Source="pack://siteoforigin:,,,/Resources/folder_icon.png" MouseDown="imgFolder_MouseDown" VerticalAlignment="Stretch"></Image>
+                <TextBlock Name="tbCenter" Grid.Row="1" Text="CENTER" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" FontStretch="Condensed" TextWrapping="WrapWithOverflow">
+                    <TextBlock.Effect>
+                        <DropShadowEffect Opacity="0.4"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Column="3" HorizontalAlignment="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Name="imgRight" Grid.Row="0" Source="pack://siteoforigin:,,,/Resources/folder_icon.png" MouseDown="imgFolder_MouseDown" VerticalAlignment="Stretch">
+                    <Image.Effect>
+                        <BlurEffect Radius="4"/>
+                    </Image.Effect>
+                </Image>
+                <TextBlock Name="tbRight" Grid.Row="1" Text="RIGHT" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF666666" FontSize="18" FontWeight="Bold" FontStretch="Condensed" TextWrapping="WrapWithOverflow">
+                    <TextBlock.Effect>
+                        <DropShadowEffect Opacity="0.4"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+
+            <Grid Grid.Column="4" HorizontalAlignment="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Name="imgBackRight" Grid.Row="0" Source="pack://siteoforigin:,,,/Resources/folder_icon.png" MouseDown="imgFolder_MouseDown" VerticalAlignment="Stretch">
+                    <Image.Effect>
+                        <BlurEffect Radius="5"/>
+                    </Image.Effect>
+                </Image>
+                <TextBlock Name="tbBackRight" Grid.Row="1" Text="BACK_RIGHT" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#FF969696" FontSize="18" FontWeight="Bold" FontStretch="Condensed" TextWrapping="WrapWithOverflow">
+                    <TextBlock.Effect>
+                        <DropShadowEffect Opacity="0.4"/>
+                    </TextBlock.Effect>
+                </TextBlock>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
